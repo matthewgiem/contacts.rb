@@ -11,7 +11,7 @@ class Email_address
   define_singleton_method(:find) do |identification|
     found_email = nil
     @@emails.each() do |email|
-      if email.id()eql?(identification.to_i())
+      if email.id().eql?(identification.to_i())
         found_email = email
       end
     end
