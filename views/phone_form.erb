@@ -1,0 +1,16 @@
+<h1>Add a new phone number </h1>
+
+<form class="" action="/contacts/<%= @contact.id() %>/phones" method="post">
+
+  <label for="area_code">Area Code:</label>
+  <input type="text" name="area_code" id="area_code">
+
+  <label for="number">Number:</label>
+  <input type="text" name="number" id="number">
+
+  <label for="type">Type of phone:</label>
+  <input type="text" name="type" id="type">
+
+  <button type="submit" name="button">Submit!</button>
+
+</form>

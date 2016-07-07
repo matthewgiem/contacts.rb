@@ -1,0 +1,11 @@
+<h1> <%= @contact.first_name() + ' ' + @contact.last_name() %> </h1>
+<h4> <%= @contact.job_title + ', ' + @contact.company() %> </h4>
+
+<h3>Phone Numbers:</h3>
+<ul> <% @contact.phone_numbers().each() do |number| %>
+  <li> (<%= number.area_code()%>) <%= number.number() + '-' + number.type() %> </li>
+  <% end %>
+</ul>
+
+
+<a href="<%= @contact.id() %>/phones/new"><button type="button" name="button">Add a Phone Number</button></a>
