@@ -25,6 +25,10 @@ class Contact
     @mailing_addresses
   end
 
+  define_method(:id) do
+    @id
+  end
+
   define_singleton_method(:all) do
     @@contacts
   end
@@ -43,7 +47,7 @@ class Contact
     found_contact
   end
 
-  define_method(:add_phone_numer) do |phone_number|
+  define_method(:add_phone_number) do |phone_number|
     @phone_numbers.push(phone_number)
   end
 
@@ -53,5 +57,9 @@ class Contact
 
   define_method(:add_mailing_address) do |address|
     @mailing_addresses.push(address)
+  end
+
+  define_singleton_method(:clear) do
+    @@contacts = []
   end
 end
